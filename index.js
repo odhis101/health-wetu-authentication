@@ -6,6 +6,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import fileupload from 'express-fileupload';
 import Users from './routes/User.js';
+import Ambulance from './routes/Ambulance.js';
 
 const app = express();
 dotenv.config();
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(fileupload());
 
 app.use('/users',Users)
+app.use('/ambulance',Ambulance)
 
 
 const CONNECTION_URL = 'mongodb+srv://odhis101:natasha12@cluster0.r1d9hq1.mongodb.net/healthwetu?retryWrites=true&w=majority'
